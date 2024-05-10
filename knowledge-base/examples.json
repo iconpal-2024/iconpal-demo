@@ -1,0 +1,33 @@
+[
+    {
+        "text": "In any situation, surveillance camera must remain on..",
+        "policy": "If true Then SurveillanceCamera.status == \"On\"",
+        "category": "Unconditional Statement"
+    },
+    {
+        "text": "In any situation, front door must remain locked.",
+        "policy": "If true Then FrontDoor.status == \"Locked\"",
+        "category": "Unconditional Statement"
+    },
+    
+    {
+        "text": "In any situation, TV speaker volume should never be more than 90.",
+        "policy": "If true Then not(TVSpeakerVolumeOver90)\n\nTVSpeakerVolumeOver90 = TVSpeaker.volume > 90",
+        "category": "Unconditional Statement"
+    },
+    {
+        "text": "If the door is open then the light should be on.",
+        "policy": "If DoorOpen Then LightOn\n\nDoorOpen = (Door.status == \"Open\")\nLightOn = (Light.status == \"On\")",
+        "category": "Simple Statement"
+    },
+    {
+        "text": "If fire is detected in the home then fire sprinkler should be on.",
+        "policy": "If FireDetected Then FireSprinklerOn\n\nFireDetected = (FireSensor.status == \"Detected\")\nFireSprinklerOn = (FireSprinkler.status == \"On\")",
+        "category": "Simple Statement"
+    },
+    {
+        "text": "If heater is on, then air conditioner should be off.",
+        "policy": "If HeaterOn Then AirConditionerOff\n\nHeaterOn = (Heater.status == \"On\")\nAirConditionerOff= (AirConditioner.status == \"Off\")",
+        "category": "Simple Statement"
+    }
+]

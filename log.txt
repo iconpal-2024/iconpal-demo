@@ -1,0 +1,25 @@
+
+Text: In any situation, room temperature should never be over 100.
+[DEBUG] Failed Translation:
+If true Then not(RoomTemperatureOver100)
+
+RoomTemperatureOver100 = RoomTemperature > 100
+[DEBUG] Reason:
+'RoomTemperature' variable used but not defined
+
+Translated Policy:
+-----------------
+If true Then not(RoomTemperatureOver100)
+RoomTemperatureOver100 = (RoomTemperature.status > 100)
+
+Semantically valid: True
+
+Text: If smoke is detected, then gas stove should be turned off.
+
+Translated Policy:
+-----------------
+If SmokeDetected Then GasStoveOff
+SmokeDetected = (SmokeSensor.status == "Detected")
+GasStoveOff = (GasStove.status == "Off")
+
+Semantically valid: True
