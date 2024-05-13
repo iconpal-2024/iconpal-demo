@@ -4,7 +4,7 @@ iConPAL is a fully automated policy authoring assistant for IoT environments. It
 
 ### Disclaimer
 
-This repository contains the code for the iConPAL demo only and supports GPT 3.5 and GPT 4 models only whearas the full implementation supports other LLMs including LLama 2 13B, LLama 2 70 B, Mistral, Mixtral, and Yi 34B. It uses a subset of policy translation examples in the prompt whereas the full implementation contains 3 example translatins from each of 8 categories (24 in total). Moreover, it requires manual categorization of the input policy texts whereas the full implementation supports automated categorization of the input policy text. The full implementation of the iConPAL system will be released upon acceptance of the paper.
+This repository contains the code for the iConPAL demo only and supports GPT-3.5 and GPT-4 models only whearas the full implementation supports other LLMs including LLama-2-13B, LLama-2-70B, Mistral, Mixtral, and Yi-34B. It uses a subset of policy translation examples in the prompt whereas the full implementation contains 3 example translatins from each of 8 categories (24 in total). Moreover, it requires manual categorization of the input policy texts whereas the full implementation supports automated categorization of the input policy text. The full implementation of the iConPAL system will be released upon acceptance of the paper.
 
 ### Installation
 
@@ -15,7 +15,12 @@ pip install -r requirements.txt
 ```
 
 ### Usage
+Set the `OPENAI_API_KEY` environment variable to your OpenAI API key.
+```
+export OPEN_AI_API_KEY=<your-openai-api-key>
+```
 
+Run the following command to see the help message.
 ```
 python iconpal.py --help      
 usage: Translate natural policy text to formal policy [-h] [--dry-run]
@@ -28,7 +33,9 @@ options:
   -m {gpt-3.5-turbo,gpt-4-turbo}, --model {gpt-3.5-turbo,gpt-4-turbo}
                         Model to use
   -d, --debug           Debug mode
+
 ```
+
 
 ### Knolwedge Base
 
